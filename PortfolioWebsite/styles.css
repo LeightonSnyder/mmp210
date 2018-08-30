@@ -1,0 +1,34 @@
+body{
+    background: #7f7f7f;
+    font-family: helvetica, verdana, sans-serif;
+    color: #ffffff;
+}
+
+#container{
+    padding: 100px;
+    width: 500px;
+    margin: 0, auto;
+}
+
+a{
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+h1{
+    font-size: 5em;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+li {
+    float: left;
+}
