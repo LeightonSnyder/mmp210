@@ -10,12 +10,18 @@ body{
     margin: 0, auto;
 }
 
-a{
+li a{
     display: block;
     padding: 0.5em;
+    text-align: center;
     text-decoration: none;
     color: white;
     background-color: black;
+}
+
+li a:hover {
+    background-color: white;
+    color: crimson;
 }
 
 h1{
@@ -26,6 +32,7 @@ ul{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    overflow: hidden;
     background-color: black;
 }
 
