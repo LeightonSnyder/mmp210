@@ -5,20 +5,15 @@ body {
     margin: 0
 }
 
-#header {
-    padding: 50px 0 30px 15%;
-    margin: 0;
-}
-
 #container {
     padding: 50px 20% 30px 15%;
-    width: 500px;
-    margin: 0;
+    width: 485px;
+    margin: 0, auto;
 }
 
 h1 {
-    margin: 0 0 0px;
-    font-size: 5em;
+    margin: 0 0 10px;
+    font-size: 4em;
 }
 
 h2 {
@@ -27,7 +22,7 @@ h2 {
 }
 
 img {
-    max-width: 500px;
+    max-width: 485px;
 }
 
 li a {
