@@ -36,10 +36,11 @@ img {
 }
 
 li a {
-    display: block;
-    width: 40px;
-    padding: 0.5em 30px;
     text-align: center;
+    display: block;
+    width: 55px;
+    padding: 0.5em 30px;
+    
     text-decoration: none;
     color: white;
     font-family: futura, sans-serif;
@@ -61,6 +62,13 @@ ul {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+
+canvas {
+    margin: auto;
+    padding-left: 15%;
+    padding-right: 15%;
+    
 }
 
 li {
