@@ -1,9 +1,9 @@
 /*
 Self Portrait
-v 2
+v 3
 by Leighton
 mmp 210
-adding variables
+interactive
 */
 
 function setup() {
@@ -15,12 +15,15 @@ function draw() {
     background(80);
     rectMode(CENTER);
 
+    var mouseeyeX = map(mouseX, 0, width, -10, 10)
+    var mouseeyeY = map(mouseY, 0, width, 0, 10)
+    
     //eye vars
     var eyeWidth = 20;
     var eyeHeight = 30;
-    var leftEyeX = 160;
-    var rightEyeX = 240;
-    var eyeY = map(mouseY, 0, height, 225, 250);
+    var leftEyeX = 160 + mouseeyeX;
+    var rightEyeX = 240 + mouseeyeX;
+    var eyeY = 195 + mouseeyeY;
 
     //head
     var headWidth = 200;
@@ -32,19 +35,19 @@ function draw() {
 
     //left eyebrow vars
     var browL1x = 180;
-    var browL1y = (mouseY/15)+185;
+    var browL1y = 185;
     var browL2x = 100;
-    var browL2y = (mouseY/15)+185;
+    var browL2y = 185;
     var browL3x = 180;
-    var browL3y = (mouseY/15)+165;
+    var browL3y = 165;
 
     //right eyebrow vars
     var browR1x = 220;
-    var browR1y = (mouseY/15)+170;
+    var browR1y = 170;
     var browR2x = 300;
-    var browR2y = (mouseY/15)+170;
+    var browR2y = 170;
     var browR3x = 220;
-    var browR3y = (mouseY/15)+150;
+    var browR3y = 150;
 
     //nose vars
     var noseX = 200;
@@ -138,6 +141,27 @@ function draw() {
     var fHair3height = 100;
     
     
+    
+    //eyebrow movement
+    if (mouseX > width/2) {
+        browR1y = 170
+        browR2y = 170
+        browR3y = 150
+        
+        browL1y = 185
+        browL2y = 185
+        browL3y = 165
+    }
+    
+    if (mouseX < width/2) {
+        browR1y = 185
+        browR2y = 185
+        browR3y = 165
+        
+        browL1y = 170
+        browL2y = 170
+        browL3y = 150
+    }
     
     //hair
     noStroke();
