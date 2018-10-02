@@ -1,3 +1,9 @@
+/*
+Self Portrait
+v 1
+by Leighton
+mmp 210
+*/
 function setup() {
     createCanvas(400, 400);
 
