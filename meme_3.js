@@ -17,6 +17,8 @@ var catspeed = 3;
 function preload() {
     cat1 = loadImage("cat1.png");
     cat2 = loadImage("cat2.png");
+    toffbar = loadImage("toffifay.png");
+    toff = loadImage("toff.png");
 }
 
 function setup() {
@@ -58,6 +60,8 @@ function draw() {
         cat = cat2;
     }
     image(cat, catX-50, catY-50, 100, 100);
+    image(toffbar, 100, 100, 100, 22.68);
+    image(toff, 250, 100, 16, 20);
 
     //cat control
     //catX += (keyleft + keyright);
