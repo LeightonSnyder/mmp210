@@ -12,6 +12,7 @@ var speed = 25;
 var catX = 200;
 var catY = 50;
 var catspeed = 3;
+var toffY = 0;
 
 
 function preload() {
@@ -24,14 +25,12 @@ function preload() {
 function setup() {
     createCanvas(800, 500);
     frame = 1;
-
+    
 
 }
 
 function draw() {
     background(80);
-
-    
     //controls
     if (keyIsDown(UP_ARROW)){
         catY -= catspeed;
@@ -60,8 +59,18 @@ function draw() {
         cat = cat2;
     }
     image(cat, catX-50, catY-50, 100, 100);
-    image(toffbar, 100, 100, 100, 22.68);
-    image(toff, 250, 100, 16, 20);
+    
+    toffY++;
+    
+    push();
+    translate(width/2, toffY);
+    var r = frameCount / 75*PI;
+    rotate(r);
+    image(toffbar, -50, -11.34, 100, 22.68);
+    pop();
+    translate(width/3, toffY);
+    rotate(r);
+    image(toff, -8, -10, 16, 20);
 
     //cat control
     //catX += (keyleft + keyright);
