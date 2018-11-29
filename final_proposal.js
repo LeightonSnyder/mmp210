@@ -50,7 +50,7 @@ function draw() {
         image(art1, 200, 170);
         textSize(15);
         text("Each player uses a potentiometer to control their paddle, while the button acts as start/serve button", width/2, 143);
-    } else if (slide == 4) {
+    } else if (slide == 5) {
         textSize(30);
         text("That's it", width/2, height/2);
     }
@@ -59,7 +59,7 @@ function draw() {
 function mousePressed() {
     
     if (mouseX > width/2) {
-        if (slide < 4) {
+        if (slide < 5) {
             slide++;
         }
     } else {
