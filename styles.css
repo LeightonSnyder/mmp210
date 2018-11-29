@@ -3,6 +3,7 @@ body {
     font-family: helvetica, sans-serif;
     color: #ffffff;
     margin: 0;
+    
 }
 
 #portrait {
@@ -17,9 +18,10 @@ body {
 
 #container {
     padding: 50px 20% 30px 15%;
-    width: 500px;
+    width: 600px;
     margin: 0;
 }
+
 
 h1 {
     margin: 0 0 0px;
