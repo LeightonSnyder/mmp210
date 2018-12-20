@@ -46,6 +46,10 @@ function setup() {
 	serial.on('close', portClose);
 	
 	serial.open(portName);
+    
+    bounce.playMode('restart');
+     textSize(50);
+    textFont("Arial");
 }
 
 function serverConnected() {
@@ -75,8 +79,8 @@ function serialEvent() {
     if(currentString.length > 0) {
         var sensors = split(currentString, ','); //split string at comma
         if (sensors.length > 1) {
-            LY = (sensors[0], 0, 1023, 0, height); //left paddle
-            RY = (sensors[1], 0, 1023, 0, height); //right paddle
+            LY = map(sensors[0], 0, 1023, 0, height); //left paddle
+            RY = map(sensors[1], 0, 1023, 0, height); //right paddle
         }
     }
 	sensorValue = currentString; // save it for the draw method
@@ -91,12 +95,12 @@ function draw() {
     
     //paddle
     var paddleLX = 200;
-    var paddleLY = 450;
+    var paddleLY = LY;
     var paddleLW = 22.167;
     var paddleLH = 100;
     
     var paddleRX = 1400;
-    var paddleRY = 700;
+    var paddleRY = RY;
     var paddleRW = 22.167;
     var paddleRH = 100;
     
@@ -105,8 +109,7 @@ function draw() {
     background(0);
     fill(255);
     
-    textSize(50);
-    textFont("Arial");
+   
     text(scoreL, 400, 100);
     text(scoreR, 1200, 100);
     
@@ -166,11 +169,11 @@ function keyPressed() {
 		gameon = false;
         ballChangeX = 0;
         ballChangeY = 0;
-	   }
+    }
     else if ((keyCode == 32) && (gameon == false)) {
 		gameon = true;
         ballChangeX = 5;
         ballChangeY = 5;
         start.play();
-	   }
+    }
     }
